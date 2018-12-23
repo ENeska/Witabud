@@ -1,0 +1,887 @@
+@import "_variables.scss";
+@import "mixins/screen";
+
+*{
+  box-sizing: border-box;
+  font-family: 'League Spartan Bold', arial, serif;
+  margin: 0;
+  padding: 0;
+}
+
+*:after, *:before{
+  box-sizing: inherit;
+}
+
+html, body {
+  max-width: 100%;
+}
+
+.head{
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 30px 25px;
+
+  @include screen-phoneBig {
+    padding: 30px 30px;
+  }
+  @include screen-tablet {
+    padding: 35px 37px;
+  }
+  @include screen-desktop {
+    max-width: 1170px;
+    margin: auto;
+    padding: 35px 37px;
+  }
+  &__hamburger{
+    @include screen-tablet {
+      display: none;
+    }
+  }
+}
+
+.menu{
+  position: relative;
+}
+
+.menu {
+  display: none;
+
+  @include screen-tablet {
+    display: flex;
+    width:65%;
+  }
+  @include screen-desktop {
+    display: flex;
+    width:60%;
+  }
+  &__ul{
+    font-weight: bold;
+    @include screen-tablet {
+      display: flex;
+      list-style: none;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  &__li{
+  &--a {
+    @include screen-tablet {
+      position: relative;
+      font-weight: bolder;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 25px;
+      color: $color-main-16;
+    }
+    &:hover {
+      color: $color-main-2;
+      &:before {
+      @include screen-tablet {
+        content: "";
+        position: absolute;
+        width: 100%;
+        bottom: -42px;
+        height: 1px;
+        border-bottom: 4px solid $color-main-2;
+        background-color: red;
+      }}
+    }
+  }
+  }
+}
+
+.slider {
+  padding: 65px 20px 30px 20px;
+  text-transform: uppercase;
+  text-align: center;
+  width:100%;
+  //height: 490px;
+  background-image: url(image/slider1.png);
+  background-position: left 53% top 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include screen-phoneBig {
+    padding: 85px 20px 30px 20px;
+  }
+
+  @include screen-tablet {
+    padding: 185px 20px 55px 20px;
+  }
+
+  @include screen-desktop {
+    padding: 185px 20px 85px 37px;
+  }
+
+  &__content{
+    @include screen-desktop {
+     max-width: 1170px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+}
+
+.slider__slogan {
+
+  font-weight: bolder;
+
+  @include screen-phoneBig {
+    padding: 0 10%;
+  }
+
+  &--h1 {
+    font-size: 35px;
+
+    color: white;
+    line-height: 35px;
+    @include screen-phoneBig {
+      font-size: 48px;
+      line-height: 52px;
+    }
+    @include screen-tablet {
+      font-size: 55px;
+      line-height: 52px;
+      width: 70%;
+      margin: auto;
+    }
+    @include screen-desktop {
+      margin: 0;
+      text-align: left;
+
+    }
+  }
+  &--p {
+    font-size: 25px;
+    color: $color-main-1;
+    padding-bottom: 8px;
+    font-weight: bolder;
+    @include screen-phoneBig {
+      font-size: 30px;
+      padding-bottom: 25px;
+    }
+
+  }
+}
+
+  .redirection {
+    font-size: 17px;
+    font-weight: bolder;
+    width: 100%;
+    @include screen-phoneBig {
+      //width: 80%;
+    }
+
+
+    &__all{
+      margin-top: 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include screen-phoneBig {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      @include screen-tablet {
+        margin-top: 60px;
+        margin-bottom: 75px;
+      }
+      @include screen-desktop {
+        margin-top: 65px;
+        margin-bottom: 115px;
+        justify-content: flex-start;
+      }
+    }
+    &__a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 55px;
+      max-width: 300px;
+      margin-bottom: 17px;
+      width:100%;
+      font-size: 16px;
+      @include screen-phoneBig {
+        margin-right: 10px;
+        max-width: 240px;
+        margin-bottom: 0;
+      }
+
+      &--yellow {
+        background-color: $color-main-2;
+        color: $color-main-3;
+        text-decoration: none;
+      }
+      &--black {
+        background-color: $color-main-4;
+        color: $color-main-2;
+        //margin: auto;
+      }
+    }
+    &__p{
+      color: white;
+      font-size: 16px;
+      padding-bottom: 25px;
+    }
+    &__arrow{
+      display: flex;
+      justify-content: center;
+      margin: 20px 0 45px 0;
+    }
+  }
+
+  .services{
+
+    @include screen-phoneBig {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include screen-desktop {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  .services__div{
+    height: 250px;
+    display: flex;
+    background-position: left 53% top -30px;
+    background-repeat: no-repeat;
+    //background-size: cover;
+    justify-content: center;
+    align-items: center;
+
+    background-color: green;
+
+    @include screen-tablet {
+      background-position: center;
+      background-size: cover;
+    }
+
+
+    &--painting {
+      background-image: url(image/painting_v.png);
+    }
+    &--paperhanging {
+      background-image: url(image/paperhanging_v.png);
+    }
+    &--tiling {
+      background-image: url(image/laying_tiles_v.png);
+    }
+    &--stackingPanels {
+      background-image: url(image/stacking_panels_v.png);
+    }
+  }
+
+  .services__a{
+    font-weight: bolder;
+    padding: 20px 25px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $color-main-2;
+    text-decoration: none;
+    color: $color-main-2;
+    text-align: center;
+    font-size: 25px;
+    &--short{
+      max-width: 220px;
+    }
+    &--long{
+      max-width: 180px;
+    }
+  }
+
+
+
+  .recommendations{
+    background-color: $color-main-5;
+    padding: 15px 25px;
+
+    @include screen-phoneBig {
+      padding: 15px 30px;
+    }
+
+    @include screen-tablet {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 35px 40px;
+    }
+    @include screen-desktop {
+      padding: 80px 40px;
+      justify-content: center;
+    }
+
+
+    &__div{
+      border: 1px solid $color-main-6;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 40px 33px 40px;
+      line-height: 25px;
+      margin: 15px 0;
+
+      @include screen-tablet {
+        margin: 0;
+        padding: 0 25px 33px 25px;
+      }
+
+      @include screen-desktop {
+        max-width: 450px;
+      }
+
+      &:nth-child(1){
+        @include screen-tablet {
+          margin-right: 15px;
+        }
+        @include screen-desktop {
+          margin-right: 15px;
+
+        }
+
+      }
+
+      &:nth-child(2){
+        @include screen-tablet {
+          margin-right: 15px;
+        }
+        @include screen-desktop {
+          margin-right: 15px;
+        }
+      }
+
+      &--image{
+        margin: 33px 0;
+      }
+      &--name{
+        color: $color-main-7;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 17px;
+      }
+      &--opinion{
+        color: $color-main-8;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .realizations {
+    padding: 40px 25px 15px 25px;
+    font-size: 20px;
+
+    @include screen-phoneBig {
+      padding: 60px 30px 15px 30px;
+    }
+
+    @include screen-tablet {
+      padding: 60px 37px 15px 37px;
+    }
+
+    @include screen-desktop {
+      padding: 80px 37px 65px 37px;
+      max-width: 1170px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+    }
+
+
+      &__header {
+
+        @include screen-phoneBig {
+
+        }
+
+
+        @include screen-tablet {
+          display: grid;
+          grid-template-columns: 1.5fr 2fr;
+        }
+        @include screen-desktop {
+          display: grid;
+          grid-template-columns: 1fr;
+          margin-right: 40px;
+        }
+
+      }
+
+
+
+    &__title{
+      text-transform: uppercase;
+      font-size: 33px;
+      font-weight: bolder;
+      letter-spacing: -2px;
+      padding-bottom: 30px;
+
+      @include screen-phoneBig {
+        padding-right: 20px;
+      }
+      @include screen-tablet {
+        padding-bottom: 0;
+      }
+      @include screen-desktop {
+        padding-bottom: 35px;
+      }
+
+    }
+    &__describe{
+      font-size: 14px;
+      line-height: 25px;
+      color: $color-main-9;
+    }
+  }
+
+  .realizations__a {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 0 45px 0;
+    @include screen-desktop {
+      flex-direction: column;
+    }
+
+
+    &--more{
+      text-decoration: none;
+      color: $color-main-2;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 17px;
+      letter-spacing: -1.5px;
+
+      @include screen-desktop {
+        margin-top: 30px;
+      }
+    }
+    &--arrow{
+      padding-right: 20px;
+    }
+  }
+
+
+  .realization {
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-rows: 2.3fr 1.8fr;
+
+    @include screen-phoneBig {
+      display: grid;
+      grid-template-columns: 4fr 3.2fr;
+      grid-template-rows: 1fr;
+
+    }
+
+    @include screen-tablet {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    &:nth-child(1){
+      @include screen-tablet {
+        margin-right: 10px;
+      }
+
+    }
+    &:nth-child(2){
+      @include screen-tablet {
+        margin-right: 10px;
+      }
+
+    }
+
+    &__all{
+
+      @include screen-tablet {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+      }
+
+    }
+
+    .one{
+      background-image: url(image/realisation1.png);
+      background-position: left 20% top 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .two{
+      background-image: url(image/realisation2.png);
+      background-position: left 20% top 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .three{
+      background-image: url(image/realisation3.png);
+      background-position: left 20% top 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &__frame {
+
+      &--image {
+        width: 130%;
+        transform: translate(-12%, -23%);
+        position: relative;
+
+        @include screen-phoneBig {
+          width: 200%;
+          transform: translate(-12%, 0);
+          position: center;
+        }
+
+      }
+
+
+
+
+    }
+    &__describe {
+      padding: 35px 30px;
+      border: 1px solid $color-main-10;
+
+      @include screen-phoneBig {
+        padding: 35px 30px 45px 30px;
+    }
+
+      &--title{
+        font-weight: bolder;
+        padding-bottom: 25px;
+        font-size: 18px;
+      }
+      &--text{
+        color: $color-main-11;
+        font-size: 14px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  .footerBar {
+    background-color: $color-main-2;
+    padding: 35px 25px 30px 25px;
+
+
+    @include screen-phoneBig {
+      padding: 35px 30px 30px 30px;
+    }
+
+    @include screen-tablet {
+
+       padding: 35px 37px 30px 37px;
+     }
+
+    @include screen-desktop {
+
+      padding: 35px 0 30px 0;
+    }
+
+    &__content{
+
+      @include screen-phoneBig {
+        display: grid;
+        grid-template-columns: 2.5fr 4fr;
+      }
+
+      @include screen-tablet {
+        grid-template-columns: 2.8fr 3.6fr;
+
+      }
+
+      @include screen-desktop {
+        grid-template-columns: 3fr 3.7fr;
+        max-width: 1170px;
+        padding: 0 37px;
+        margin: auto;
+      }
+
+    }
+    &__text{
+      color: $color-main-12;
+      text-align: center;
+      font-size: 18px;
+      padding: 0 0 30px 0;
+      line-height: 25px;
+      @include screen-phoneBig {
+        text-align: left;
+        padding: 0;
+      }
+      @include screen-tablet {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+&--p{
+  padding-right: 10px;
+}
+    }
+    &__phone{
+      display: flex;
+      justify-content: space-evenly;
+      align-content: center;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      @include screen-phoneBig {
+        justify-content: flex-end;
+      }
+
+      @include screen-tablet {
+        justify-content: flex-end;
+      }
+
+      &--smallText{
+        font-size: 20px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        padding-right: 15px;
+
+        @include screen-tablet {
+          padding-right: 25px;
+        }
+      }
+      &--largeText{
+        font-size: 25px;
+        font-weight: bolder;
+        padding-left: 15px;
+
+        @include screen-tablet {
+          padding-left: 25px;
+        }
+      }
+    }
+  }
+
+  .footer_container {
+    padding-right: 20px;
+    padding-left: 25px;
+
+    @include screen-tablet {
+      padding-left: 30px
+    }
+    @include screen-desktop {
+
+      padding-left: 37px
+    }
+  }
+
+.footerWrap{
+
+
+  @include screen-tablet {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    width:100%;
+  }
+  @include screen-desktop {
+    max-width: 1170px;
+    margin:auto;
+  }
+}
+
+
+
+
+  .footer {
+    padding: 0px 0 0 0;
+    background-color: $color-main-3;
+    position: relative;
+    z-index: -2;
+
+    &__background {
+      top:0;
+      left: 0;
+      z-index: -1;
+      position: absolute;
+      height: 54%;
+    }
+    &__logo {
+      box-sizing: content-box;
+      padding-top: 40px;
+      padding-bottom: 35px;
+      border-bottom: 1px solid $color-main-13;
+    }
+    &__data {
+      padding: 25px 0;
+      border-bottom: 1px solid $color-main-13;
+      display: flex;
+      flex-direction: column;
+      color: $color-main-14;
+      line-height: 20px;
+      @include screen-phoneBig {
+        padding: 30px 0;
+      }
+
+      &--name{
+        color: $color-main-15;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .address {
+
+      display: grid;
+      grid-template-columns:  1fr 1fr;
+
+    padding-bottom: 41px;
+
+    @include screen-phoneBig {
+      padding-bottom: 0;
+      width: 100%;
+    }
+
+    &__container{
+      @include screen-phoneBig {
+       display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+
+
+      }
+
+    }
+
+    &__div{
+      width: 100%;
+      //display: flex;
+      //flex-direction: column;
+      //justify-content: space-between;
+      //align-items: flex-end;
+      @include screen-phoneBig {
+        max-width: 170px;
+
+      }
+
+
+      &--text{
+        line-height: 20px;
+      }
+      &--mail{
+        color: $color-main-2;
+      }
+    }
+  }
+
+  .footer__social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+    color: $color-main-14;
+    padding: 25px 0px 25px 0;
+    border-bottom: 1px solid $color-main-13;
+    font-weight: bold;
+
+    @include screen-tablet {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      width:100%;
+    }
+
+    &--a:first-of-type{
+      padding-right: 15px;
+    }
+    &--a:nth-child(2){
+      padding-right: 15px;
+    }
+    &:last-child{
+      padding-right: 43px;
+    }
+  }
+
+  .footer__nav {
+    padding: 30px 0;
+    & ul{
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-content: space-between;
+      flex-wrap: wrap;
+    }
+    & li {
+      color: white;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 25px;
+    }
+  }
+
+  .footer__map {
+    background-image: url(image/map.png);
+    background-position: left 20% top 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 250px;
+    padding: 0;
+
+    &--btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 250px;
+      flex-direction: column;
+
+      @include screen-tablet {
+        height:100%;
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex-direction: row-reverse;
+        padding: 0 37px 30px 0;
+      }
+
+    }
+    &--text{
+      text-transform: uppercase;
+      color: $color-main-2;
+      font-weight: bolder;
+      margin-top: 20px;
+
+      @include screen-tablet {
+       padding-right: 15px;
+        margin-bottom: 25px;
+      }
+
+    }
+  }
+
+  .footer__time4 {
+    padding: 30px 0;
+    background-color: $color-main-13;
+    color: $color-main-17;
+  &--p{
+    text-align: center;
+  }
+
+    &--a{
+      color: $color-main-18;
+      text-decoration: none;
+    }
+
+  }
+

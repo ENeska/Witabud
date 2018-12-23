@@ -1,0 +1,20 @@
+@import "../variables";
+
+@mixin screen-phoneBig {
+  @media screen and (min-width: $screen-phoneBig) {
+    @content;
+  }
+}
+
+
+@mixin screen-tablet {
+  @media screen and (min-width: $screen-tablet) {
+    @content;
+  }
+}
+
+@mixin screen-desktop {
+  @media screen and (min-width: $screen-desktop) {
+    @content;
+  }
+}
