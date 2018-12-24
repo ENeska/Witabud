@@ -1,0 +1,306 @@
+footer {
+  font-family: "League Spartan", serif;
+}
+
+.footerBar {
+  background-color: $color-brand;
+  padding: 35px 25px 30px 25px;
+  @include screen-phone-l {
+    padding: 35px 30px 30px 30px;
+  }
+  @include screen-tablet {
+    padding: 35px 37px 30px 37px;
+  }
+  @include screen-desktop {
+    padding: 35px 0 30px 0;
+  }
+  &__content {
+    @include screen-phone-l {
+      display: grid;
+      grid-template-columns: 2.5fr 4fr;
+    }
+    @include screen-tablet {
+      grid-template-columns: 2.8fr 3.6fr;
+    }
+    @include screen-desktop {
+      grid-template-columns: 3fr 3.7fr;
+      max-width: 1170px;
+      padding: 0 37px;
+      margin: auto;
+    }
+  }
+  &__text {
+    color: $color-yellow-light;
+    font-family: "Myriad Pro", serif;
+    text-align: center;
+    font-size: 18px;
+    padding: 0 0 30px 0;
+    line-height: 25px;
+    @include screen-phone-l {
+      text-align: left;
+      padding: 0;
+    }
+    @include screen-tablet {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 22px;
+    }
+    &--p {
+      padding-right: 5px;
+    }
+  }
+  &__phone {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    @include screen-phone-l {
+      justify-content: flex-end;
+    }
+    @include screen-tablet {
+      justify-content: flex-end;
+    }
+    &--smallText {
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding-right: 15px;
+      @include screen-tablet {
+        padding-right: 25px;
+        font-size: 18px;
+      }
+    }
+    &--largeText {
+      font-size: 24px;
+      font-weight: bold;
+      padding-left: 15px;
+
+      @include screen-tablet {
+        padding-left: 25px;
+      }
+      @include screen-desktop {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.footer_container {
+  padding-right: 20px;
+  padding-left: 25px;
+
+  @include screen-tablet {
+    padding-left: 30px
+  }
+  @include screen-desktop {
+    padding-left: 37px
+  }
+}
+
+.footerWrap {
+  @include screen-tablet {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    width: 100%;
+  }
+  @include screen-desktop {
+    max-width: 1170px;
+    margin: auto;
+  }
+}
+
+.footer {
+  padding: 0px 0 0 0;
+  background-color: $color-black;
+  position: relative;
+
+  &__background {
+    top: -21%;
+    left: -60%;
+    position: absolute;
+    height: 85%;
+    z-index: 1;
+    @include screen-phone-l {
+      top: -18%;
+      left: -14%;
+      height: 83%;
+    }
+    @include screen-tablet {
+      top: -25%;
+      left: -25%;
+      height: 133%;
+    }
+    @include screen-tablet {
+      top: -25%;
+      left: -25%;
+      height: 133%;
+    }
+    @include screen-desktop {
+      top: -30%;
+      left: 0;
+      height: 133%;
+    }
+  }
+  &__logo {
+    box-sizing: content-box;
+    padding-top: 40px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid $color-grey-dark-2;
+  }
+  &__data {
+    padding: 25px 0;
+    border-bottom: 1px solid $color-grey-dark-2;
+    display: flex;
+    font-weight: normal;
+    flex-direction: column;
+    color: $color-grey-light-9;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Myriad Pro", serif;
+    @include screen-phone-l {
+      padding: 30px 0;
+    }
+    &--name {
+      color: $color-grey-light-7;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+
+.address {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 41px;
+  @include screen-phone-l {
+    padding-bottom: 0;
+    width: 100%;
+  }
+  &__container {
+    @include screen-phone-l {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+  }
+  &__div {
+    width: 100%;
+
+    &--p a{
+      text-decoration: none;
+      color: $color-grey-light-9;
+    }
+    @include screen-phone-l {
+      max-width: 170px;
+    }
+    &--text {
+      line-height: 20px;
+    }
+    &--mail {
+      color: $color-brand;
+    }
+  }
+}
+
+.footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: row;
+  align-items: center;
+  text-transform: uppercase;
+  color: $color-grey-light-9;
+  padding: 25px 0px 25px 0;
+  border-bottom: 1px solid $color-grey-dark-2;
+  font-weight: bold;
+  @include screen-tablet {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    width: 100%;
+  }
+  &--a:first-of-type {
+    padding-right: 15px;
+  }
+  &--a:nth-child(2) {
+    padding-right: 15px;
+  }
+  &:last-child {
+    padding-right: 43px;
+  }
+}
+
+.footer__nav {
+  padding: 30px 0;
+  & ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+  }
+  & li {
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 25px;
+  }
+}
+
+
+
+.footer__map {
+  background-image: url(image/map.png);
+  background-position: left 20% top 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 250px;
+  padding: 0;
+  &--btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    flex-direction: column;
+    @include screen-tablet {
+      height: 100%;
+      justify-content: flex-start;
+      align-items: flex-end;
+      flex-direction: row-reverse;
+      padding: 0 37px 30px 0;
+    }
+  }
+  &--text {
+    text-transform: uppercase;
+    color: $color-brand;
+    font-weight: bolder;
+    margin-top: 20px;
+    font-size: 14px;
+    @include screen-tablet {
+      padding-right: 15px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.footer__time4 {
+  font-family: "Myriad Pro", serif;
+  padding: 30px 0;
+  background-color: $color-grey-dark-2;
+  color: $color-grey-light-14;
+  z-index: 2;
+  position: relative;
+  &--p {
+    text-align: center;
+  }
+  &--a {
+    color: $color-grey-light-10;
+    text-decoration: none;
+  }
+}

@@ -1,29 +1,64 @@
-$color-brand: #e56c8d; // Main Primary color */
+$color-brand: #f8db14; // Main Primary color */
 
-$color-main-1: #d8d8d8;
-$color-main-2: #f8db14;
-$color-main-3: #000000;
-$color-main-4: rgba(0, 0, 0, 0.51);
-$color-main-5: #1f1f1f;
-$color-main-6: #333333;
-$color-main-7: #595959;
-$color-main-8: #c6c6c6;
-$color-main-9: #585858;
-$color-main-10: #e9e9e9;
-$color-main-11: #afafaf;
-$color-main-12: #aa9717;
-$color-main-13: #1e1e1e;
-$color-main-14: #808080;
-$color-main-15: #a8a8a8;
-$color-main-16: #4d4d4d;
-$color-main-17: #545454;
-$color-main-18: #7f7f7f;
+//Yellow
+$color-yellow-light: #aa9717;
+$color-yellow-dark: #736718;
+
+//Black
+$color-black: #000000;
+//White
+$color-white: #ffffff;
+
+//GreyLight
+$color-grey-light-1: #e9e9e9;
+$color-grey-light-2: #f0f0f0;
+$color-grey-light-3: #dedede;
+$color-grey-light-4: #efefef;
+$color-grey-light-5: #d8d8d8;
+$color-grey-light-6: #c6c6c6;
+$color-grey-light-7: #a8a8a8;
+$color-grey-light-8: #afafaf;
+$color-grey-light-9: #808080;
+$color-grey-light-10: #7f7f7f;
+$color-grey-light-11: #595959;
+$color-grey-light-12: #585858;
+$color-grey-light-13: #4d4d4d;
+$color-grey-light-14: #545454;
+
+//GreyDark
+$color-grey-dark-1: #333333;
+$color-grey-dark-2: #1e1e1e;
+$color-grey-dark-3: #1f1f1f;
+$color-grey-dark-4: rgba(0, 0, 0, 0.51);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Artykuł
+
+$color-main-20: #414141;
+$color-main-21: #191919;
+$color-main-22: #8f8f8f;
+
+$color-main-24: #636363;
+$color-main-25: #737373;
+
+
 
 /*
  * Responsive breakpoints
  */
 
 
-$screen-phoneBig: 481px;
+$screen-phone-l: 481px;
 $screen-tablet: 768px;
 $screen-desktop: 1024px;

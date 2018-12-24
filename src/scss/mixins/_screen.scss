@@ -1,11 +1,10 @@
 @import "../variables";
 
-@mixin screen-phoneBig {
-  @media screen and (min-width: $screen-phoneBig) {
+@mixin screen-phone-l {
+  @media screen and (min-width: $screen-phone-l) {
     @content;
   }
 }
-
 
 @mixin screen-tablet {
   @media screen and (min-width: $screen-tablet) {
