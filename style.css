@@ -6,7 +6,7 @@
  */
 * {
   box-sizing: border-box;
-  font-family: "League Spartan Bold", arial, serif;
+  font-family: "League Spartan", arial, serif;
   margin: 0;
   padding: 0;
 }
@@ -20,18 +20,18 @@ html, body {
 }
 
 .slider {
-  padding: 65px 20px 30px 20px;
-  text-transform: uppercase;
-  text-align: center;
-  width: 100%;
+  align-items: center;
   background-image: url(image/slider1.png);
   background-position: left 53% top 0;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  padding: 65px 20px 30px 20px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
 }
 @media screen and (min-width: 481px) {
   .slider {
@@ -50,25 +50,23 @@ html, body {
 }
 @media screen and (min-width: 1024px) {
   .slider__content {
-    max-width: 1170px;
-    display: flex;
     align-items: flex-start;
+    display: flex;
     flex-direction: column;
+    max-width: 1170px;
   }
 }
 
-.slider__slogan {
-  font-weight: bolder;
-}
 @media screen and (min-width: 481px) {
   .slider__slogan {
     padding: 0 10%;
   }
 }
 .slider__slogan--h1 {
-  font-size: 35px;
   color: white;
-  line-height: 35px;
+  font-size: 36px;
+  font-family: "League Spartan", arial, serif;
+  line-height: 48px;
 }
 @media screen and (min-width: 481px) {
   .slider__slogan--h1 {
@@ -80,8 +78,8 @@ html, body {
   .slider__slogan--h1 {
     font-size: 55px;
     line-height: 52px;
-    width: 70%;
     margin: auto;
+    width: 70%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -91,10 +89,11 @@ html, body {
   }
 }
 .slider__slogan--p {
-  font-size: 25px;
   color: #d8d8d8;
+  font-size: 24px;
+  font-family: "League Spartan", arial, serif;
+  font-weight: bold;
   padding-bottom: 8px;
-  font-weight: bolder;
 }
 @media screen and (min-width: 481px) {
   .slider__slogan--p {
@@ -105,46 +104,46 @@ html, body {
 
 .redirection {
   font-size: 17px;
-  font-weight: bolder;
+  font-weight: bold;
   width: 100%;
 }
-.redirection__all {
-  margin-top: 45px;
+.redirection__container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: 45px;
 }
 @media screen and (min-width: 481px) {
-  .redirection__all {
-    margin-top: 50px;
-    margin-bottom: 50px;
+  .redirection__container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 @media screen and (min-width: 768px) {
-  .redirection__all {
+  .redirection__container {
     margin-top: 60px;
     margin-bottom: 75px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .redirection__all {
+  .redirection__container {
+    justify-content: flex-start;
     margin-top: 65px;
     margin-bottom: 115px;
-    justify-content: flex-start;
   }
 }
 .redirection__a {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   height: 55px;
+  font-size: 16px;
+  justify-content: center;
   max-width: 300px;
   margin-bottom: 17px;
   width: 100%;
-  font-size: 16px;
 }
 @media screen and (min-width: 481px) {
   .redirection__a {
@@ -185,15 +184,13 @@ html, body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-
 .services__div {
-  height: 250px;
-  display: flex;
+  align-items: center;
   background-position: left 53% top -30px;
   background-repeat: no-repeat;
+  display: flex;
+  height: 250px;
   justify-content: center;
-  align-items: center;
-  background-color: green;
 }
 @media screen and (min-width: 768px) {
   .services__div {
@@ -213,17 +210,16 @@ html, body {
 .services__div--stackingPanels {
   background-image: url(image/stacking_panels_v.png);
 }
-
 .services__a {
-  font-weight: bolder;
-  padding: 20px 25px;
-  justify-content: center;
   align-items: center;
   border: 2px solid #f8db14;
-  text-decoration: none;
   color: #f8db14;
+  font-size: 24px;
+  font-weight: bold;
+  justify-content: center;
+  padding: 20px 25px;
   text-align: center;
-  font-size: 25px;
+  text-decoration: none;
 }
 .services__a--short {
   max-width: 220px;
@@ -255,15 +251,15 @@ html, body {
   }
 }
 .recommendations__div {
-  border: 1px solid #333333;
-  display: flex;
   align-content: center;
   align-items: center;
+  border: 1px solid #333333;
+  display: flex;
   flex-direction: column;
-  text-align: center;
-  padding: 0 40px 33px 40px;
   line-height: 25px;
   margin: 15px 0;
+  padding: 0 40px 33px 40px;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .recommendations__div {
@@ -301,18 +297,19 @@ html, body {
 }
 .recommendations__div--name {
   color: #595959;
+  font-weight: bold;
+  font-size: 14px;
   text-transform: uppercase;
-  font-weight: bolder;
-  font-size: 17px;
 }
 .recommendations__div--opinion {
   color: #c6c6c6;
-  font-size: 13px;
+  font-size: 14px;
+  font-family: "Myriad Pro", serif;
 }
 
 .realizations {
-  padding: 40px 25px 15px 25px;
   font-size: 20px;
+  padding: 40px 25px 15px 25px;
 }
 @media screen and (min-width: 481px) {
   .realizations {
@@ -347,11 +344,10 @@ html, body {
   }
 }
 .realizations__title {
-  text-transform: uppercase;
   font-size: 33px;
   font-weight: bolder;
-  letter-spacing: -2px;
   padding-bottom: 30px;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 481px) {
   .realizations__title {
@@ -369,11 +365,11 @@ html, body {
   }
 }
 .realizations__describe {
+  color: #585858;
+  font-family: "Myriad Pro", serif;
   font-size: 14px;
   line-height: 25px;
-  color: #585858;
 }
-
 .realizations__a {
   display: flex;
   justify-content: space-between;
@@ -385,12 +381,11 @@ html, body {
   }
 }
 .realizations__a--more {
-  text-decoration: none;
   color: #f8db14;
-  text-transform: uppercase;
   font-weight: bolder;
   font-size: 17px;
-  letter-spacing: -1.5px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 1024px) {
   .realizations__a--more {
@@ -402,9 +397,9 @@ html, body {
 }
 
 .realization {
-  margin-bottom: 15px;
   display: grid;
   grid-template-rows: 2.3fr 1.8fr;
+  margin-bottom: 15px;
 }
 @media screen and (min-width: 481px) {
   .realization {
@@ -431,44 +426,26 @@ html, body {
   }
 }
 @media screen and (min-width: 768px) {
-  .realization__all {
+  .realization__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-.realization .one {
-  background-image: url(image/realisation1.png);
-  background-position: left 20% top 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.realization .two {
-  background-image: url(image/realisation2.png);
-  background-position: left 20% top 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.realization .three {
-  background-image: url(image/realisation3.png);
-  background-position: left 20% top 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .realization__frame--image {
-  width: 130%;
-  transform: translate(-12%, -23%);
   position: relative;
+  transform: translate(-12%, -23%);
+  width: 130%;
 }
 @media screen and (min-width: 481px) {
   .realization__frame--image {
-    width: 200%;
-    transform: translate(-12%, 0);
     position: center;
+    transform: translate(-12%, 0);
+    width: 200%;
   }
 }
 .realization__describe {
-  padding: 35px 30px;
   border: 1px solid #e9e9e9;
+  padding: 35px 30px;
 }
 @media screen and (min-width: 481px) {
   .realization__describe {
@@ -476,19 +453,66 @@ html, body {
   }
 }
 .realization__describe--title {
+  font-size: 18px;
   font-weight: bolder;
   padding-bottom: 25px;
-  font-size: 18px;
 }
 .realization__describe--text {
-  color: #afafaf;
+  color: #8c8c8c;
   font-size: 14px;
-  line-height: 25px;
+  font-family: "Myriad Pro", serif;
+  line-height: 24px;
+}
+
+.realization__frame--first {
+  background-image: url(image/realisation1.png);
+  background-position: left 20% top 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.realization__frame--second {
+  background-image: url(image/realisation2.png);
+  background-position: left 20% top 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.realization__frame--third {
+  background-image: url(image/realisation3.png);
+  background-position: left 20% top 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /*
  * Responsive breakpoints
  */
+footer {
+  font-family: "League Spartan", serif;
+}
+
 .footerBar {
   background-color: #f8db14;
   padding: 35px 25px 30px 25px;
@@ -529,6 +553,7 @@ html, body {
 }
 .footerBar__text {
   color: #aa9717;
+  font-family: "Myriad Pro", serif;
   text-align: center;
   font-size: 18px;
   padding: 0 0 30px 0;
@@ -545,10 +570,11 @@ html, body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    font-size: 22px;
   }
 }
 .footerBar__text--p {
-  padding-right: 10px;
+  padding-right: 5px;
 }
 .footerBar__phone {
   display: flex;
@@ -569,24 +595,30 @@ html, body {
   }
 }
 .footerBar__phone--smallText {
-  font-size: 20px;
-  font-weight: bolder;
+  font-size: 18px;
+  font-weight: bold;
   text-transform: uppercase;
   padding-right: 15px;
 }
 @media screen and (min-width: 768px) {
   .footerBar__phone--smallText {
     padding-right: 25px;
+    font-size: 18px;
   }
 }
 .footerBar__phone--largeText {
-  font-size: 25px;
-  font-weight: bolder;
+  font-size: 24px;
+  font-weight: bold;
   padding-left: 15px;
 }
 @media screen and (min-width: 768px) {
   .footerBar__phone--largeText {
     padding-left: 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footerBar__phone--largeText {
+    font-size: 30px;
   }
 }
 
@@ -623,14 +655,41 @@ html, body {
   padding: 0px 0 0 0;
   background-color: #000000;
   position: relative;
-  z-index: -2;
 }
 .footer__background {
-  top: 0;
-  left: 0;
-  z-index: -1;
+  top: -21%;
+  left: -60%;
   position: absolute;
-  height: 54%;
+  height: 85%;
+  z-index: 0;
+}
+@media screen and (min-width: 481px) {
+  .footer__background {
+    top: -18%;
+    left: -14%;
+    height: 83%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__background {
+    top: -25%;
+    left: -25%;
+    height: 133%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__background {
+    top: -25%;
+    left: -25%;
+    height: 133%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__background {
+    top: -30%;
+    left: 0;
+    height: 133%;
+  }
 }
 .footer__logo {
   box-sizing: content-box;
@@ -642,9 +701,12 @@ html, body {
   padding: 25px 0;
   border-bottom: 1px solid #1e1e1e;
   display: flex;
+  font-weight: normal;
   flex-direction: column;
   color: #808080;
+  font-size: 16px;
   line-height: 20px;
+  font-family: "Myriad Pro", serif;
 }
 @media screen and (min-width: 481px) {
   .footer__data {
@@ -654,7 +716,7 @@ html, body {
 .footer__data--name {
   color: #a8a8a8;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -679,6 +741,10 @@ html, body {
 .address__div {
   width: 100%;
 }
+.address__div--p a {
+  text-decoration: none;
+  color: #808080;
+}
 @media screen and (min-width: 481px) {
   .address__div {
     max-width: 170px;
@@ -689,11 +755,13 @@ html, body {
 }
 .address__div--mail {
   color: #f8db14;
+  text-decoration: none;
 }
 
 .footer__social {
   display: flex;
   flex-wrap: wrap;
+  font-size: 13px;
   justify-content: space-between;
   align-content: center;
   flex-direction: row;
@@ -723,20 +791,26 @@ html, body {
 
 .footer__nav {
   padding: 30px 0;
+  z-index: 2;
+  position: relative;
 }
-.footer__nav ul {
+.footer__nav--ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-content: space-between;
   flex-wrap: wrap;
 }
-.footer__nav li {
-  color: white;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: bold;
+.footer__nav--li {
   line-height: 25px;
+}
+.footer__nav--a {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .footer__map {
@@ -748,7 +822,9 @@ html, body {
   padding: 0;
 }
 .footer__map--btn {
+  filter: none;
   display: flex;
+  z-index: 2;
   justify-content: center;
   align-items: center;
   min-height: 250px;
@@ -768,6 +844,7 @@ html, body {
   color: #f8db14;
   font-weight: bolder;
   margin-top: 20px;
+  font-size: 14px;
 }
 @media screen and (min-width: 768px) {
   .footer__map--text {
@@ -777,9 +854,12 @@ html, body {
 }
 
 .footer__time4 {
+  font-family: "Myriad Pro", serif;
   padding: 30px 0;
   background-color: #1e1e1e;
   color: #545454;
+  z-index: 2;
+  position: relative;
 }
 .footer__time4--p {
   text-align: center;
@@ -790,6 +870,7 @@ html, body {
 }
 
 .head {
+  font-family: "League Spartan", serif;
   display: flex;
   justify-content: space-between;
   max-width: 100%;
@@ -807,8 +888,8 @@ html, body {
 }
 @media screen and (min-width: 1024px) {
   .head {
-    max-width: 1170px;
     margin: auto;
+    max-width: 1170px;
     padding: 35px 37px;
   }
 }
@@ -819,11 +900,8 @@ html, body {
 }
 
 .menu {
-  position: relative;
-}
-
-.menu {
   display: none;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .menu {
@@ -833,7 +911,6 @@ html, body {
 }
 @media screen and (min-width: 1024px) {
   .menu {
-    display: flex;
     width: 60%;
   }
 }
@@ -843,20 +920,19 @@ html, body {
 @media screen and (min-width: 768px) {
   .menu__ul {
     display: flex;
+    justify-content: space-between;
     list-style: none;
     width: 100%;
-    justify-content: space-between;
   }
 }
 @media screen and (min-width: 768px) {
   .menu__li--a {
-    position: relative;
+    color: #4d4d4d;
+    font-size: 12px;
     font-weight: bolder;
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 12px;
-    line-height: 25px;
-    color: #4d4d4d;
   }
 }
 .menu__li--a:hover {
@@ -864,13 +940,12 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .menu__li--a:hover:before {
+    border-bottom: 4px solid #f8db14;
+    bottom: -46px;
     content: "";
+    height: 1px;
     position: absolute;
     width: 100%;
-    bottom: -42px;
-    height: 1px;
-    border-bottom: 4px solid #f8db14;
-    background-color: red;
   }
 }
 
