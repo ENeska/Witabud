@@ -27,7 +27,7 @@ time, mark, audio, video {
 
 * {
   box-sizing: border-box;
-  font-family: "League Spartan", serif;
+  font-family: "League Spartan", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -73,7 +73,7 @@ html, body {
 }
 .article__content--h1 {
   color: #736718;
-  font-family: "League Spartan", serif;
+  font-family: "League Spartan", sans-serif;
   font-size: 30px;
   font-weight: bolder;
   padding: 50px 25px;
@@ -111,7 +111,7 @@ html, body {
 }
 .article__content--h3 {
   color: #191919;
-  font-family: myriad-pro, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 22px;
   font-weight: normal;
   line-height: 34px;
@@ -124,7 +124,7 @@ html, body {
 }
 .article__content--p {
   color: #414141;
-  font-family: myriad-pro, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 30px;
@@ -166,7 +166,7 @@ aside {
 .form__head {
   color: white;
   font-size: 18px;
-  font-family: "League Spartan", arial, serif;
+  font-family: "League Spartan", sans-serif;
   padding-bottom: 30px;
   text-transform: uppercase;
 }
@@ -198,7 +198,7 @@ aside {
   color: #000000;
   font-weight: bolder;
   font-size: 14px;
-  font-family: "League Spartan", arial, serif;
+  font-family: "League Spartan", sans-serif;
   outline: none;
   padding: 20px 25px;
   text-transform: uppercase;
@@ -209,7 +209,7 @@ aside {
 input::placeholder, textarea::placeholder {
   color: #8f8f8f;
   font-size: 14px;
-  font-family: "Myriad Pro", serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .info__content {
@@ -230,7 +230,7 @@ input::placeholder, textarea::placeholder {
 }
 .info__content--h2 {
   font-size: 18px;
-  font-family: "League Spartan", serif;
+  font-family: "League Spartan", sans-serif;
   font-weight: bold;
   line-height: 1.667;
   padding-bottom: 41px;
@@ -239,14 +239,14 @@ input::placeholder, textarea::placeholder {
 .info__content--h4 {
   color: #636363;
   font-size: 18px;
-  font-family: "Myriad Pro", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   line-height: 1.666;
 }
 .info__content--p {
   color: #737373;
   font-size: 14px;
-  font-family: "Myriad Pro", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   line-height: 26px;
   padding-top: 40px;
@@ -399,7 +399,7 @@ input::placeholder, textarea::placeholder {
 .realization__describe--text {
   color: #afafaf;
   font-weight: normal;
-  font-family: "Myriad Pro", serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 1.714;
 }
@@ -559,7 +559,7 @@ time, mark, audio, video {
  * Responsive breakpoints
  */
 footer {
-  font-family: "League Spartan", serif;
+  font-family: "League Spartan", sans-serif;
 }
 
 .footerBar {
@@ -602,7 +602,7 @@ footer {
 }
 .footerBar__text {
   color: #aa9717;
-  font-family: "Myriad Pro", serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 18px;
   padding: 0 0 30px 0;
@@ -755,7 +755,7 @@ footer {
   color: #808080;
   font-size: 16px;
   line-height: 20px;
-  font-family: "Myriad Pro", serif;
+  font-family: "Roboto", sans-serif;
 }
 @media screen and (min-width: 481px) {
   .footer__data {
@@ -903,7 +903,7 @@ footer {
 }
 
 .footer__time4 {
-  font-family: "Myriad Pro", serif;
+  font-family: "Roboto", sans-serif;
   padding: 30px 0;
   background-color: #1e1e1e;
   color: #545454;
@@ -919,7 +919,7 @@ footer {
 }
 
 .head {
-  font-family: "League Spartan", serif;
+  font-family: "League Spartan", sans-serif;
   display: flex;
   justify-content: space-between;
   max-width: 100%;
@@ -996,6 +996,19 @@ footer {
     position: absolute;
     width: 100%;
   }
+}
+
+@font-face {
+  font-family: "League Spartan";
+  src: url("leaguespartan-bold.eot"), url("leaguespartan-bold.woff2") format("woff2"), url("leaguespartan-bold.woff") format("woff"), url("leaguespartan-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("roboto-v18-latin-regular.eot"), url("roboto-v18-latin-regular.woff2") format("woff2"), url("roboto-v18-latin-regular.woff") format("woff"), url("roboto-v18-latin-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /*# sourceMappingURL=style_article.css.map */

@@ -1,5 +1,5 @@
 footer {
-  font-family: "League Spartan", serif;
+  font-family: 'League Spartan', sans-serif;
 }
 
 .footerBar {
@@ -31,7 +31,7 @@ footer {
   }
   &__text {
     color: $color-yellow-light;
-    font-family: "Myriad Pro", serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     font-size: 18px;
     padding: 0 0 30px 0;
@@ -159,7 +159,7 @@ footer {
     color: $color-grey-light-9;
     font-size: 16px;
     line-height: 20px;
-    font-family: "Myriad Pro", serif;
+    font-family: 'Roboto', sans-serif;
     @include screen-phone-l {
       padding: 30px 0;
     }
@@ -302,7 +302,7 @@ footer {
 }
 
 .footer__time4 {
-  font-family: "Myriad Pro", serif;
+  font-family: 'Roboto', sans-serif;
   padding: 30px 0;
   background-color: $color-grey-dark-2;
   color: $color-grey-light-14;

@@ -6,7 +6,7 @@
  */
 * {
   box-sizing: border-box;
-  font-family: "League Spartan", arial, serif;
+  font-family: "League Spartan", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -65,7 +65,7 @@ html, body {
 .slider__slogan--h1 {
   color: white;
   font-size: 36px;
-  font-family: "League Spartan", arial, serif;
+  font-family: "League Spartan", sans-serif;
   line-height: 48px;
 }
 @media screen and (min-width: 481px) {
@@ -91,7 +91,7 @@ html, body {
 .slider__slogan--p {
   color: #d8d8d8;
   font-size: 24px;
-  font-family: "League Spartan", arial, serif;
+  font-family: "League Spartan", sans-serif;
   font-weight: bold;
   padding-bottom: 8px;
 }
@@ -304,7 +304,7 @@ html, body {
 .recommendations__div--opinion {
   color: #c6c6c6;
   font-size: 14px;
-  font-family: "Myriad Pro", serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .realizations {
@@ -366,7 +366,7 @@ html, body {
 }
 .realizations__describe {
   color: #585858;
-  font-family: "Myriad Pro", serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 25px;
 }
@@ -460,7 +460,7 @@ html, body {
 .realization__describe--text {
   color: #8c8c8c;
   font-size: 14px;
-  font-family: "Myriad Pro", serif;
+  font-family: "Roboto", sans-serif;
   line-height: 24px;
 }
 
@@ -510,7 +510,7 @@ time, mark, audio, video {
  * Responsive breakpoints
  */
 footer {
-  font-family: "League Spartan", serif;
+  font-family: "League Spartan", sans-serif;
 }
 
 .footerBar {
@@ -553,7 +553,7 @@ footer {
 }
 .footerBar__text {
   color: #aa9717;
-  font-family: "Myriad Pro", serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 18px;
   padding: 0 0 30px 0;
@@ -706,7 +706,7 @@ footer {
   color: #808080;
   font-size: 16px;
   line-height: 20px;
-  font-family: "Myriad Pro", serif;
+  font-family: "Roboto", sans-serif;
 }
 @media screen and (min-width: 481px) {
   .footer__data {
@@ -854,7 +854,7 @@ footer {
 }
 
 .footer__time4 {
-  font-family: "Myriad Pro", serif;
+  font-family: "Roboto", sans-serif;
   padding: 30px 0;
   background-color: #1e1e1e;
   color: #545454;
@@ -870,7 +870,7 @@ footer {
 }
 
 .head {
-  font-family: "League Spartan", serif;
+  font-family: "League Spartan", sans-serif;
   display: flex;
   justify-content: space-between;
   max-width: 100%;
@@ -947,6 +947,19 @@ footer {
     position: absolute;
     width: 100%;
   }
+}
+
+@font-face {
+  font-family: "League Spartan";
+  src: url("leaguespartan-bold.eot"), url("leaguespartan-bold.woff2") format("woff2"), url("leaguespartan-bold.woff") format("woff"), url("leaguespartan-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("roboto-v18-latin-regular.eot"), url("roboto-v18-latin-regular.woff2") format("woff2"), url("roboto-v18-latin-regular.woff") format("woff"), url("roboto-v18-latin-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
