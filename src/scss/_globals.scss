@@ -51,7 +51,7 @@ html, body {
   @include screen-phone-l {
     padding: 0 10%;
   }
-  &--h1 {
+  &--text {
     color: white;
     font-size: 36px;
     font-family: 'League Spartan', sans-serif;
@@ -72,7 +72,7 @@ html, body {
       text-align: left;
     }
   }
-  &--p {
+  &--name {
     color: $color-grey-light-5;
     font-size: 24px;
     font-family: 'League Spartan', sans-serif;
@@ -111,7 +111,7 @@ html, body {
       margin-bottom: 115px;
     }
   }
-  &__a{
+  &__btn{
     align-items: center;
     display: flex;
     height: 55px;
@@ -135,12 +135,12 @@ html, body {
       color: $color-brand;
       }
     }
-    &__p{
+    &__arrow--text{
       color: white;
       font-size: 16px;
       padding-bottom: 25px;
     }
-    &__arrow{
+    &__arrow--icon{
       display: flex;
       justify-content: center;
       margin: 20px 0 45px 0;
@@ -156,7 +156,9 @@ html, body {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    &__div{
+  }
+
+  .service{
       align-items: center;
       background-position: left 53% top -30px;
       background-repeat: no-repeat;
@@ -167,20 +169,19 @@ html, body {
         background-position: center;
         background-size: cover;
       }
-      &--painting {
+      &__painting {
         background-image: url(image/painting_v.png);
       }
-      &--paperhanging {
+      &__paperhanging {
         background-image: url(image/paperhanging_v.png);
       }
-      &--tiling {
+      &__tiling {
         background-image: url(image/laying_tiles_v.png);
       }
-      &--stackingPanels {
+      &__stackingPanels {
         background-image: url(image/stacking_panels_v.png);
       }
-    }
-    &__a{
+    &__btn{
       align-items: center;
       border: 2px solid $color-brand;
       color: $color-brand;
@@ -199,7 +200,7 @@ html, body {
     }
   }
 
-  .recommendations{
+  .recommendations {
     background-color: $color-grey-dark-3;
     padding: 15px 25px;
     @include screen-phone-l {
@@ -214,7 +215,10 @@ html, body {
       padding: 80px 40px;
       justify-content: center;
     }
-    &__div{
+  }
+
+
+    .recommendation{
       align-content: center;
       align-items: center;
       border: 1px solid $color-grey-dark-1;
@@ -247,23 +251,22 @@ html, body {
           margin-right: 15px;
         }
       }
-      &--image{
+      &__image{
         margin: 33px 0;
       }
-      &--name{
+      &__name{
         color: $color-grey-light-11;
 
         font-weight: bold;
         font-size: 14px;
         text-transform: uppercase;
       }
-      &--opinion{
+      &__opinion{
         color: $color-grey-light-6;
         font-size: 14px;
         font-family: 'Roboto', sans-serif;
       }
     }
-  }
 
 .realizations {
   font-size: 20px;
@@ -293,8 +296,8 @@ html, body {
     }
   }
   &__title{
-    font-size: 33px;
-    font-weight: bolder;
+    font-size: 30px;
+    font-weight: bold;
     padding-bottom: 30px;
     text-transform: uppercase;
     @include screen-phone-l {
@@ -314,7 +317,7 @@ html, body {
     line-height: 25px;
   }
 
-  &__a {
+  &__btn {
     display: flex;
     justify-content: space-between;
     padding: 35px 0 45px 0;
@@ -335,6 +338,13 @@ html, body {
       padding-right: 20px;
     }
   }
+  &__container{
+    @include screen-tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 30px;
+    }
+  }
 }
 
 .realization {
@@ -350,13 +360,6 @@ html, body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-  }
-  &__container{
-    @include screen-tablet {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 30px;
-    }
   }
   &__frame {
     &--image {
