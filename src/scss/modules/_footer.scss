@@ -2,6 +2,7 @@ footer {
   font-family: 'League Spartan', sans-serif;
 }
 
+
 .footerBar {
   background-color: $color-brand;
   padding: 35px 25px 30px 25px;
@@ -91,7 +92,6 @@ footer {
 .footer_container {
   padding-right: 20px;
   padding-left: 25px;
-
   @include screen-tablet {
     padding-left: 30px
   }
@@ -113,10 +113,8 @@ footer {
 }
 
 .footer {
-  padding: 0px 0 0 0;
   background-color: $color-black;
   position: relative;
-
   &__background {
     top: -21%;
     left: -60%;
@@ -145,85 +143,67 @@ footer {
     }
   }
   &__logo {
+    border-bottom: 1px solid $color-grey-dark-2;
     box-sizing: content-box;
     padding-top: 40px;
     padding-bottom: 35px;
-    border-bottom: 1px solid $color-grey-dark-2;
   }
   &__data {
-    padding: 25px 0;
-    border-bottom: 1px solid $color-grey-dark-2;
-    display: flex;
-    font-weight: normal;
-    flex-direction: column;
-    color: $color-grey-light-9;
-    font-size: 16px;
-    line-height: 20px;
-    font-family: 'Roboto', sans-serif;
-    @include screen-phone-l {
-      padding: 30px 0;
-    }
     &--name {
       color: $color-grey-light-7;
-      text-transform: uppercase;
       font-size: 16px;
       font-weight: bold;
+      text-transform: uppercase;
     }
   }
 }
 
 .address {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-bottom: 41px;
-  @include screen-phone-l {
-    padding-bottom: 0;
-    width: 100%;
-  }
-  &__container {
+  &__data {
+    border-bottom: 1px solid $color-grey-dark-2;
+    color: $color-grey-light-9;
+    font-size: 16px;
+    font-family: "Roboto";
+    line-height: 1.2;
+    text-decoration: none;
     @include screen-phone-l {
-      display: flex;
-      justify-content: space-between;
       font-size: 14px;
     }
   }
   &__div {
-    width: 100%;
-
-    &--p a{
-      text-decoration: none;
+    &--a{
       color: $color-grey-light-9;
-    }
-    @include screen-phone-l {
-      max-width: 170px;
-    }
-    &--text {
-      line-height: 20px;
-    }
-    &--mail {
-      color: $color-brand;
       text-decoration: none;
+    }
+    &--mail{
+      color: $color-brand;
+    }
+  }
+  &__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 25px 0;
+
+    @include screen-phone-l {
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }
 
 .footer__social {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 13px;
-  justify-content: space-between;
-  align-content: center;
-  flex-direction: row;
-  align-items: center;
-  text-transform: uppercase;
-  color: $color-grey-light-9;
-  padding: 25px 0px 25px 0;
   border-bottom: 1px solid $color-grey-dark-2;
+  color: $color-grey-light-9;
+  display: grid;
+  font-size: 13px;
   font-weight: bold;
+  grid-template-columns: 1fr 1fr;
+  padding: 25px 0;
+  text-transform: uppercase;
+  @include screen-phone-l {
+    grid-template-columns: 2fr 1fr;
+  }
   @include screen-tablet {
-    display: grid;
-    grid-template-columns: 1fr 1.8fr;
-    width: 100%;
+    grid-template-columns: 1fr 2fr;
   }
   &--a:first-of-type {
     padding-right: 15px;
@@ -231,22 +211,23 @@ footer {
   &--a:nth-child(2) {
     padding-right: 15px;
   }
-  &:last-child {
-    padding-right: 43px;
+  &--p{
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
   }
 }
 
 .footer__nav {
   padding: 30px 0;
-  z-index: 2;
   position: relative;
-
+  z-index: 2;
   &--ul {
-    list-style: none;
+    align-content: space-between;
     display: flex;
     justify-content: space-between;
-    align-content: space-between;
     flex-wrap: wrap;
+    list-style: none;
   }
 
   &--li {
@@ -263,7 +244,6 @@ footer {
   }
 }
 
-
 .footer__map {
   background-image: url(image/map.png);
   background-position: left 20% top 0;
@@ -273,41 +253,41 @@ footer {
   padding: 0;
 
   &--btn {
-    filter: none;
-    display: flex;
-    z-index: 2;
-    justify-content: center;
     align-items: center;
-    min-height: 250px;
+    display: flex;
+    filter: none;
     flex-direction: column;
+    justify-content: center;
+    min-height: 250px;
+    z-index: 2;
     @include screen-tablet {
-      height: 100%;
-      justify-content: flex-start;
       align-items: flex-end;
       flex-direction: row-reverse;
+      height: 100%;
+      justify-content: flex-start;
       padding: 0 37px 30px 0;
     }
   }
   &--text {
-    text-transform: uppercase;
     color: $color-brand;
+    font-size: 14px;
     font-weight: bolder;
     margin-top: 20px;
-    font-size: 14px;
+    text-transform: uppercase;
     @include screen-tablet {
-      padding-right: 15px;
       margin-bottom: 25px;
+      padding-right: 15px;
     }
   }
 }
 
 .footer__time4 {
-  font-family: 'Roboto', sans-serif;
-  padding: 30px 0;
   background-color: $color-grey-dark-2;
   color: $color-grey-light-14;
-  z-index: 2;
+  font-family: 'Roboto', sans-serif;
+  padding: 30px 0;
   position: relative;
+  z-index: 2;
   &--p {
     text-align: center;
   }

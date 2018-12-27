@@ -55,6 +55,7 @@ html, body {
     color: white;
     font-size: 36px;
     font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
     line-height: 48px;
     @include screen-phone-l {
       font-size: 48px;
@@ -350,20 +351,11 @@ html, body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
-  &:nth-child(1){
-    @include screen-tablet {
-      margin-right: 10px;
-    }
-  }
-  &:nth-child(2){
-    @include screen-tablet {
-      margin-right: 10px;
-    }
-  }
   &__container{
     @include screen-tablet {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 30px;
     }
   }
   &__frame {
