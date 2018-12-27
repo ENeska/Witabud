@@ -465,7 +465,7 @@ input::placeholder, textarea::placeholder {
     padding: 55px 37px 60px 37px;
   }
 }
-.services__h2 {
+.services__title {
   color: #636363;
   font-weight: bold;
   font-size: 20px;
@@ -480,7 +480,7 @@ input::placeholder, textarea::placeholder {
   justify-items: center;
   margin: auto;
 }
-.services__content--ul {
+.services__list {
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-columns: minmax(max-content, 300px);
@@ -490,25 +490,25 @@ input::placeholder, textarea::placeholder {
   width: 100%;
 }
 @media screen and (min-width: 481px) {
-  .services__content--ul {
+  .services__list {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 16px;
     width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
-  .services__content--ul {
+  .services__list {
     grid-template-columns: minmax(200px, 270px) minmax(200px, 270px) minmax(200px, 270px);
     grid-column-gap: 16px;
     width: auto;
   }
 }
 @media screen and (min-width: 1024px) {
-  .services__content--ul {
+  .services__list {
     grid-template-columns: minmax(200px, 230px) minmax(200px, 230px) minmax(200px, 230px);
   }
 }
-.services__content--li {
+.services__list--item {
   align-content: center;
   border: 2px solid #000000;
   display: grid;
@@ -519,7 +519,7 @@ input::placeholder, textarea::placeholder {
   padding: 0 5px;
   text-align: center;
 }
-.services :before {
+.services:before {
   background-color: #efefef;
   background-image: url(image/services_bg.png);
   background-position: left 53% top 0;
@@ -940,11 +940,11 @@ footer {
     width: 60%;
   }
 }
-.menu__ul {
+.menu__list {
   font-weight: bold;
 }
 @media screen and (min-width: 768px) {
-  .menu__ul {
+  .menu__list {
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -952,7 +952,7 @@ footer {
   }
 }
 @media screen and (min-width: 768px) {
-  .menu__li--a {
+  .menu__list--item {
     color: #4d4d4d;
     font-size: 12px;
     font-weight: bolder;
@@ -961,11 +961,11 @@ footer {
     text-transform: uppercase;
   }
 }
-.menu__li--a:hover {
+.menu__list--item:hover {
   color: #f8db14;
 }
 @media screen and (min-width: 768px) {
-  .menu__li--a:hover:before {
+  .menu__list--item:hover:before {
     border-bottom: 4px solid #f8db14;
     bottom: -46px;
     content: "";

@@ -1,4 +1,4 @@
-.head{
+.head {
   font-family: 'League Spartan', sans-serif;
   display: flex;
   justify-content: space-between;
@@ -15,7 +15,8 @@
     max-width: 1170px;
     padding: 35px 37px;
   }
-  &__hamburger{
+
+  &__hamburger {
     @include screen-tablet {
       display: none;
     }
@@ -27,12 +28,13 @@
   position: relative;
   @include screen-tablet {
     display: flex;
-    width:65%;
+    width: 65%;
   }
   @include screen-desktop {
-    width:60%;
+    width: 60%;
   }
-  &__ul{
+
+  &__list {
     font-weight: bold;
     @include screen-tablet {
       display: flex;
@@ -41,10 +43,8 @@
       width: 100%;
 
     }
-  }
-  &__li{
 
-    &--a {
+    &--item {
       @include screen-tablet {
         color: $color-grey-light-13;
         font-size: 12px;
@@ -53,14 +53,17 @@
         text-decoration: none;
         text-transform: uppercase;
       }
+
       &:hover {
         color: $color-brand;
+
         &:before {
           @include screen-tablet {
             border-bottom: 4px solid $color-brand;
             bottom: -46px;
             content: "";
-            height: 1px;position: absolute;
+            height: 1px;
+            position: absolute;
             width: 100%;
           }
         }
@@ -68,3 +71,4 @@
     }
   }
 }
+

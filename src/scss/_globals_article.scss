@@ -2,14 +2,14 @@
 @import "mixins/screen";
 @import "normalize";
 
-*{
+* {
   box-sizing: border-box;
   font-family: 'League Spartan', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-*:after, *:before{
+*:after, *:before {
   box-sizing: inherit;
 }
 
@@ -21,7 +21,7 @@ html, body {
   position: relative;
 }
 
-.article{
+.article {
   &__container {
     @include screen-tablet {
       display: grid;
@@ -34,6 +34,7 @@ html, body {
       margin: auto;
     }
   }
+
   &__content {
     padding: 0 25px;
     @include screen-phone-l {
@@ -42,6 +43,7 @@ html, body {
     @include screen-tablet {
       padding: 0;
     }
+
     &--h1 {
       color: $color-yellow-dark;
       font-family: 'League Spartan', sans-serif;
@@ -60,7 +62,7 @@ html, body {
         margin: auto;
       }
 
-      &:before{
+      &:before {
         background-color: $color-brand;
         background-image: url(image/article_bg.png);
         background-position: left 53% top 0;
@@ -75,6 +77,7 @@ html, body {
         z-index: -1;
       }
     }
+
     &--h3 {
       color: $color-main-21;
       font-family: 'Roboto', sans-serif;
@@ -86,6 +89,7 @@ html, body {
         padding: 0 0 40px 0;;
       }
     }
+
     &--p {
       color: $color-main-20;
       font-family: 'Roboto', sans-serif;
@@ -94,6 +98,7 @@ html, body {
       line-height: 30px;
       padding-bottom: 65px;
     }
+
     &--img {
       padding-bottom: 30px;
       width: 100%;
@@ -107,35 +112,39 @@ html, body {
   }
 }
 
-aside{
+aside {
   padding: 0 25px;
 }
 
-.form{
+.form {
   background-color: $color-black;
   padding: 35px;
   @include screen-phone-l {
-  margin: 0 30px;
+    margin: 0 30px;
   }
   @include screen-tablet {
     margin: 0;
   }
-  &__head{
+
+  &__head {
     color: white;
     font-size: 18px;
     font-family: 'League Spartan', sans-serif;
     padding-bottom: 30px;
     text-transform: uppercase;
   }
-  &__input{
+
+  &__input {
     border: none;
     margin-bottom: 10px;
     padding: 20px 25px;
     width: 100%;
-    &--long{
+
+    &--long {
       min-height: 95px;
     }
-    &--group{
+
+    &--group {
       @include screen-phone-l {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -147,6 +156,7 @@ aside{
       }
     }
   }
+
   &__button {
 
     background-color: $color-brand;
@@ -169,7 +179,7 @@ input::placeholder, textarea::placeholder {
   font-family: 'Roboto', sans-serif;
 }
 
-.info__content{
+.info__content {
   background-color: $color-grey-light-2;
   margin: 25px 25px 0 25px;
   padding: 40px 35px 90px 35px;
@@ -180,6 +190,7 @@ input::placeholder, textarea::placeholder {
   @include screen-tablet {
     margin: 30px 0 0 0;
   }
+
   &--h2 {
     font-size: 18px;
     font-family: 'League Spartan', sans-serif;
@@ -188,6 +199,7 @@ input::placeholder, textarea::placeholder {
     padding-bottom: 41px;
     text-transform: uppercase;
   }
+
   &--h4 {
     color: $color-main-24;
     font-size: 18px;
@@ -195,7 +207,8 @@ input::placeholder, textarea::placeholder {
     font-weight: normal;
     line-height: 1.666;
   }
-  &--p{
+
+  &--p {
     color: $color-main-25;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
@@ -219,7 +232,8 @@ input::placeholder, textarea::placeholder {
     max-width: 1170px;
     padding: 35px 37px 80px 37px;
   }
-  &__title{
+
+  &__title {
     font-size: 33px;
     font-weight: bolder;
     padding-bottom: 30px;
@@ -234,6 +248,7 @@ input::placeholder, textarea::placeholder {
     @include screen-desktop {
       padding-bottom: 55px;
     }
+
     &:after {
       @include screen-tablet {
         content: "";
@@ -246,11 +261,13 @@ input::placeholder, textarea::placeholder {
       }
     }
   }
-  &__describe{
+
+  &__describe {
     color: $color-grey-light-12;
     font-size: 14px;
     line-height: 25px;
   }
+
   &__a {
     display: flex;
     justify-content: space-between;
@@ -258,7 +275,8 @@ input::placeholder, textarea::placeholder {
     @include screen-desktop {
       flex-direction: column;
     }
-    &--more{
+
+    &--more {
       color: $color-brand;
       font-weight: bolder;
       font-size: 17px;
@@ -269,7 +287,8 @@ input::placeholder, textarea::placeholder {
         margin-top: 30px;
       }
     }
-    &--arrow{
+
+    &--arrow {
       padding-right: 20px;
     }
   }
@@ -289,10 +308,11 @@ input::placeholder, textarea::placeholder {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
-  &__all{
+
+  &__all {
     @include screen-tablet {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr ;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-column-gap: 30px;
     }
     @include screen-desktop {
@@ -301,11 +321,13 @@ input::placeholder, textarea::placeholder {
       grid-column-gap: 10px;
     }
   }
+
   &__frame {
     background-position: left 20% top 0;
     background-repeat: no-repeat;
     background-size: cover;
   }
+
   &__describe {
     border: 1px solid $color-grey-light-1;
     padding: 35px 30px;
@@ -315,28 +337,31 @@ input::placeholder, textarea::placeholder {
     @include screen-tablet {
       padding: 35px 37px 45px 37px;
     }
-    &--title{
+
+    &--title {
       font-size: 18px;
       font-weight: bold;
       line-height: 1.2;
       padding-bottom: 25px;
-      }
-    &--text{
+    }
+
+    &--text {
       color: $color-grey-light-8;
       font-weight: normal;
       font-family: 'Roboto', sans-serif;
       font-size: 14px;
       line-height: 1.714;
-      }
+    }
   }
 
-  &__btn{
+  &__btn {
     background-color: $color-brand;
     display: flex;
     justify-content: center;
     margin: 20px 0 0 0;
     padding: 25px 0;
     width: 100%;
+
     &--more {
       color: white;
       font-size: 14px;
@@ -347,29 +372,35 @@ input::placeholder, textarea::placeholder {
   }
 }
 
-.tiles_1{
+.tiles_1 {
   background-image: url(image/realisation1.png);
 }
 
-.tiles_2{
+.tiles_2 {
   background-image: url(image/realisation2.png);
 }
-.tiles_3{
+
+.tiles_3 {
   background-image: url(image/realisation3.png);
 }
-.tiles_4{
+
+.tiles_4 {
   background-image: url(image/realisation4.png);
 }
-.tiles_5{
+
+.tiles_5 {
   background-image: url(image/realisation5.png);
 }
-.tiles_6{
+
+.tiles_6 {
   background-image: url(image/realisation6.png);
 }
-.tiles_7{
+
+.tiles_7 {
   background-image: url(image/realisation7.png);
 }
-.tiles_8{
+
+.tiles_8 {
   background-image: url(image/realisation8.png);
 }
 
@@ -382,7 +413,8 @@ input::placeholder, textarea::placeholder {
   @include screen-tablet {
     padding: 55px 37px 60px 37px;
   }
-  &__h2{
+
+  &__title {
     color: $color-main-24;
     font-weight: bold;
     font-size: 20px;
@@ -391,34 +423,37 @@ input::placeholder, textarea::placeholder {
     text-transform: uppercase;
     text-align: center;
   }
-  &__content{
+
+  &__content {
     align-content: center;
     display: grid;
     justify-items: center;
     margin: auto;
-    &--ul{
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-auto-columns: minmax(max-content, 300px);
-      grid-row-gap: 10px;
-      list-style: none;
-      margin: auto;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-columns: minmax(max-content, 300px);
+    grid-row-gap: 10px;
+    list-style: none;
+    margin: auto;
+    width: 100%;
+    @include screen-phone-l {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 16px;
       width: 100%;
-      @include screen-phone-l {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 16px;
-        width: 100%;
-          }
-      @include screen-tablet {
-        grid-template-columns: minmax(200px, 270px) minmax(200px, 270px) minmax(200px, 270px);
-        grid-column-gap: 16px;
-        width: auto;
-      }
-      @include screen-desktop {
-        grid-template-columns: minmax(200px, 230px) minmax(200px, 230px) minmax(200px, 230px);
-      }
     }
-    &--li{
+    @include screen-tablet {
+      grid-template-columns: minmax(200px, 270px) minmax(200px, 270px) minmax(200px, 270px);
+      grid-column-gap: 16px;
+      width: auto;
+    }
+    @include screen-desktop {
+      grid-template-columns: minmax(200px, 230px) minmax(200px, 230px) minmax(200px, 230px);
+    }
+
+    &--item {
       align-content: center;
       border: 2px solid $color-black;
       display: grid;
@@ -430,7 +465,8 @@ input::placeholder, textarea::placeholder {
       text-align: center;
     }
   }
-  :before{
+
+  &:before {
     background-color: $color-grey-light-4;
     background-image: url(image/services_bg.png);
     background-position: left 53% top 0;
