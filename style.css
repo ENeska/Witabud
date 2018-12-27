@@ -883,11 +883,11 @@ footer {
     width: 60%;
   }
 }
-.menu__ul {
+.menu__list {
   font-weight: bold;
 }
 @media screen and (min-width: 768px) {
-  .menu__ul {
+  .menu__list {
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -895,7 +895,7 @@ footer {
   }
 }
 @media screen and (min-width: 768px) {
-  .menu__li--a {
+  .menu__list--item {
     color: #4d4d4d;
     font-size: 12px;
     font-weight: bolder;
@@ -904,11 +904,11 @@ footer {
     text-transform: uppercase;
   }
 }
-.menu__li--a:hover {
+.menu__list--item:hover {
   color: #f8db14;
 }
 @media screen and (min-width: 768px) {
-  .menu__li--a:hover:before {
+  .menu__list--item:hover:before {
     border-bottom: 4px solid #f8db14;
     bottom: -46px;
     content: "";

@@ -22,6 +22,40 @@ html, body {
 }
 
 .article {
+  &__title {
+    color: $color-yellow-dark;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 50px 25px;
+    text-transform: uppercase;
+    @include screen-phone-l {
+      padding: 50px 30px;
+    }
+    @include screen-phone-l {
+      padding: 50px 37px;
+    }
+    @include screen-desktop {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    &:before {
+      background-color: $color-brand;
+      background-image: url(image/article_bg.png);
+      background-position: left 53% top 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      content: "";
+      height: 130px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
   &__container {
     @include screen-tablet {
       display: grid;
@@ -44,41 +78,7 @@ html, body {
       padding: 0;
     }
 
-    &--h1 {
-      color: $color-yellow-dark;
-      font-family: 'League Spartan', sans-serif;
-      font-size: 30px;
-      font-weight: bolder;
-      padding: 50px 25px;
-      text-transform: uppercase;
-      @include screen-phone-l {
-        padding: 50px 30px;
-      }
-      @include screen-phone-l {
-        padding: 50px 37px;
-      }
-      @include screen-desktop {
-        max-width: 1170px;
-        margin: auto;
-      }
-
-      &:before {
-        background-color: $color-brand;
-        background-image: url(image/article_bg.png);
-        background-position: left 53% top 0;
-        background-size: cover;
-        background-repeat: no-repeat;
-        content: "";
-        height: 130px;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: -1;
-      }
-    }
-
-    &--h3 {
+    &--header {
       color: $color-main-21;
       font-family: 'Roboto', sans-serif;
       font-size: 22px;
@@ -90,7 +90,7 @@ html, body {
       }
     }
 
-    &--p {
+    &--text {
       color: $color-main-20;
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
@@ -191,7 +191,7 @@ input::placeholder, textarea::placeholder {
     margin: 30px 0 0 0;
   }
 
-  &--h2 {
+  &--title {
     font-size: 18px;
     font-family: 'League Spartan', sans-serif;
     font-weight: bold;
@@ -200,7 +200,7 @@ input::placeholder, textarea::placeholder {
     text-transform: uppercase;
   }
 
-  &--h4 {
+  &--header {
     color: $color-main-24;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
@@ -219,7 +219,6 @@ input::placeholder, textarea::placeholder {
 }
 
 .realizations {
-  font-size: 20px;
   padding: 40px 25px 25px 25px;
   @include screen-phone-l {
     padding: 60px 30px 50px 30px;
@@ -234,9 +233,9 @@ input::placeholder, textarea::placeholder {
   }
 
   &__title {
-    font-size: 33px;
-    font-weight: bolder;
-    padding-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 55px;
     position: relative;
     text-transform: uppercase;
     @include screen-phone-l {
@@ -250,46 +249,26 @@ input::placeholder, textarea::placeholder {
     }
 
     &:after {
-      @include screen-tablet {
-        content: "";
-        background-color: $color-grey-light-3;
-        height: 1px;
-        left: 0;
-        position: absolute;
-        top: 60px;
-        width: 100%;
-      }
+      content: "";
+      background-color: $color-grey-light-3;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 45px;
+      width: 100%;
     }
   }
 
-  &__describe {
-    color: $color-grey-light-12;
-    font-size: 14px;
-    line-height: 25px;
-  }
-
-  &__a {
-    display: flex;
-    justify-content: space-between;
-    padding: 35px 0 45px 0;
+  &__container {
+    @include screen-tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 30px;
+    }
     @include screen-desktop {
-      flex-direction: column;
-    }
-
-    &--more {
-      color: $color-brand;
-      font-weight: bolder;
-      font-size: 17px;
-      letter-spacing: -1.5px;
-      text-decoration: none;
-      text-transform: uppercase;
-      @include screen-desktop {
-        margin-top: 30px;
-      }
-    }
-
-    &--arrow {
-      padding-right: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 10px;
     }
   }
 }
@@ -309,18 +288,6 @@ input::placeholder, textarea::placeholder {
     grid-template-rows: 1fr 1fr;
   }
 
-  &__all {
-    @include screen-tablet {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 30px;
-    }
-    @include screen-desktop {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-column-gap: 10px;
-    }
-  }
 
   &__frame {
     background-position: left 20% top 0;
