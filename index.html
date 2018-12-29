@@ -8,25 +8,31 @@
     <meta name="apple-mobile-web-app-title" content="Witbud">
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, shrink-to-fit=no">
     <link href="style.css" rel="stylesheet">
+    <script src="src/js/app.js" defer></script>
     <title>Witabud</title>
 </head>
 
 <body>
-<div class="wrap">
+<div id="wrap" class="wrap">
+
     <header class="head">
         <a href="index.html" class="head__logo" title="Go back to homepage">
             <img src="image/logo.png" alt="Logo">
         </a>
-        <a href="#" class="head__hamburger" title="Open menu">
+        <a href="#" id="hamburger" class="head__hamburger" title="Open menu">
             <img src="image/hamburger.png" alt="Menu">
         </a>
-        <nav class="menu">
+        <nav id="menu" class="menu">
             <ul class="menu__list">
-                <li><a class="menu__list--item" href="index.html" title="">strona główna</a></li>
-                <li><a class="menu__list--item" href="#" title="">o firmie</a></li>
-                <li><a class="menu__list--item" href="#" title="">usługi</a></li>
-                <li><a class="menu__list--item" href="article.html" title="">realizacje</a></li>
-                <li><a class="menu__list--item" href="#" title="">kontakt</a></li>
+                <li id="back" class="menu__list--item"><img class="menu__list--arrow" src="image/arrow_menu.png" alt="">wróć
+                </li>
+                <li class="menu__list--item"><a class="menu__list--href" href="index.html" title="">strona główna</a>
+                </li>
+                <li class="menu__list--item"><a class="menu__list--href" href="#" title="">o firmie</a></li>
+                <li class="menu__list--item"><a class="menu__list--href" href="#" title="">usługi</a></li>
+                <li class="menu__list--item"><a class="menu__list--href" href="article.html" title="">realizacje</a>
+                </li>
+                <li class="menu__list--item"><a class="menu__list--href" href="#" title="">kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -169,8 +175,11 @@
                             </div>
                             <div class="address__col">
                                 <br>
-                                <a class="address__text address__text__normal" href="tel:+48639852741">Tel.: +48 639 852 741</a> <br>
-                                <span class="address__text address__text__normal">E-mail: </span><a href="mailto:kontakt@witabud.pl" class="address__text__normal address__text__yellow">kontakt@witabud.pl</a>
+                                <a class="address__text address__text__normal" href="tel:+48639852741">Tel.: +48 639 852
+                                    741</a> <br>
+                                <span class="address__text address__text__normal">E-mail: </span><a
+                                    href="mailto:kontakt@witabud.pl"
+                                    class="address__text__normal address__text__yellow">kontakt@witabud.pl</a>
                             </div>
                         </div>
                     </div>
