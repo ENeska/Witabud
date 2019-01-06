@@ -72,6 +72,10 @@
       width: 100%;
     }
 
+    & .active {
+      color: $color-brand;
+    }
+
     & li {
       border-bottom: 1px solid $color-grey-dark-6;
       font-size: 23px;

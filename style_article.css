@@ -929,6 +929,9 @@ footer {
     width: 100%;
   }
 }
+.open_menu ul .active {
+  color: #f8db14;
+}
 .open_menu ul li {
   border-bottom: 1px solid #363636;
   font-size: 23px;
