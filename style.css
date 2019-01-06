@@ -525,7 +525,6 @@ html {
 .slider__nav {
   left: 25px;
   right: 25px;
-  width: calc(100% - 50px);
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
