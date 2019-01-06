@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-title" content="Witbud">
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, shrink-to-fit=no">
     <link href="style.css" rel="stylesheet">
-    <script src="src/js/app.js" defer></script>
+    <script src="src/js/app_home.js" defer></script>
     <title>Witabud</title>
 </head>
 
@@ -19,9 +19,9 @@
         <a href="index.html" class="head__logo" title="Go back to homepage">
             <img src="image/logo.png" alt="Logo">
         </a>
-        <a href="#" id="hamburger" class="head__hamburger" title="Open menu">
+        <button href="#" id="hamburger" class="head__hamburger" title="Open menu">
             <img src="image/hamburger.png" alt="Menu">
-        </a>
+        </button>
         <nav id="menu" class="menu">
             <ul class="menu__list">
                 <li id="back" class="menu__list--item"><img class="menu__list--arrow" src="image/arrow_menu.png" alt="">wróć
@@ -39,9 +39,9 @@
 
     <main class="content">
 
-        <section class="slider">
-            <div class="slider__content">
-                <p class="slider__slogan--name">witold goj </p>
+        <section class="slider font__league">
+            <div class="slider__content mySlides">
+                <p class="slider__slogan--name">witold goj</p>
                 <h1 class="slider__slogan--text">usługi remontowo wykończeniowe</h1>
                 <div class="redirection">
                     <div class="redirection__container">
@@ -49,12 +49,16 @@
                         <a class="redirection__btn redirection__btn--black">zadzwoń +48 639 852 741</a>
                     </div>
                     <p class="redirection__arrow--text">zobacz nasze usługi</p>
-                    <a class="redirection__arrow--icon" href="#"><img src="image/down.png" alt=""></a>
+                    <a class="redirection__arrow--icon" href="#services"><img src="image/down.png" alt=""></a>
+                </div>
+                <div class="slider__nav">
+                    <button type="button" class="slider__nav--btn" id="left"><img src="image/left_white.png" alt="left button"></button>
+                    <button type="button" class="slider__nav--btn" id="right"><img src="image/right_white.png" alt="right button"></button>
                 </div>
             </div>
         </section>
 
-        <section class="services">
+        <section class="services" id="services">
             <div class="service service__painting">
                 <a class="service__btn service__btn--short" href="#">Malowanie</a>
             </div>
@@ -99,38 +103,83 @@
                 </div>
                 <div class="realizations__btn">
                     <div>
-                        <a class="realizations__btn--arrow" href="#"><img src="image/left.png" alt="Left arrow"></a>
-                        <a class="realizations__btn--arrow" href="#"><img src="image/right.png" alt="Right arrow"></a>
+                        <button class="realizations__btn--arrow" id="left__realization" href="#"><img src="image/left.png" alt="Left arrow"></button>
+                        <button class="realizations__btn--arrow" id="right__realization"  href="#"><img src="image/right.png" alt="Right arrow"></button>
                     </div>
-                    <a class="realizations__btn--more" href="#">zobacz więcej</a>
+                    <a class="realizations__btn--more" href="article.html">zobacz więcej</a>
                 </div>
             </div>
             <div class="realizations__container">
                 <div class="realization">
-                    <div class="realization__frame realization__frame--first">
+                    <div class="realization__frame tiles_1">
                     </div>
                     <div class="realization__describe">
-                        <h3 class="realization__describe--title">Układanie kafelek <br> w domu zdrojowym w Krynicy</h3>
+                        <h2 class="realization__describe--title">Układanie kafelek <br> w domu zdrojowym w Krynicy</h2>
                         <p class="realization__describe--text">Mauris nec malesuada fames ac turpis scing wisi. Integer
                             sapien massa ac turpis faucibus.</p>
                     </div>
                 </div>
                 <div class="realization">
-                    <div class="realization__frame realization__frame--second">
+                    <div class="realization__frame tiles_2">
                     </div>
                     <div class="realization__describe">
-                        <h3 class="realization__describe--title">Tapetowanie w salonie kosmetycznym</h3>
+                        <h2 class="realization__describe--title">Tapetowanie w salonie kosmetycznym</h2>
                         <p class="realization__describe--text">Tortor fringilla sed, vestib bus orci luctus onsectetuer
                             lobortis quis, varius in, purus. Integer</p>
                     </div>
                 </div>
                 <div class="realization">
-                    <div class="realization__frame realization__frame--third">
+                    <div class="realization__frame tiles_3">
                     </div>
                     <div class="realization__describe">
-                        <h3 class="realization__describe--title">Tapetowanie w restuaracji francuskiej</h3>
+                        <h2 class="realization__describe--title">Tapetowanie w restuaracji francuskiej</h2>
                         <p class="realization__describe--text">Mauris nec malesuada fames ac turpis scing wis endum
                             sapien massa ac turpis faucibus.</p>
+                    </div>
+                </div>
+                <div class="realization">
+                    <div class="realization__frame tiles_4">
+                    </div>
+                    <div class="realization__describe">
+                        <h3 class="realization__describe--title">Układanie kafelek w gospodzie u Babci Maliny</h3>
+                        <p class="realization__describe--text">Tortor fringilla sed, vestib bus orci luctus onsectetuer
+                            lobortis quis, varius in, purus. Integer</p>
+                    </div>
+                </div>
+                <div class="realization">
+                    <div class="realization__frame tiles_5">
+                    </div>
+                    <div class="realization__describe">
+                        <h3 class="realization__describe--title">Układanie kafelek w domu zdrojowym w Krynicy</h3>
+                        <p class="realization__describe--text">Mauris nec malesuada fames ac turpis scing wis endum
+                            sapien massa ac turpis faucibus.</p>
+                    </div>
+                </div>
+                <div class="realization">
+                    <div class="realization__frame tiles_6">
+                    </div>
+                    <div class="realization__describe">
+                        <h3 class="realization__describe--title">Układanie kafelek w salonie kosmetycznym</h3>
+                        <p class="realization__describe--text">Tortor fringilla sed, vestib bus orci luctus onsectetuer
+                            lobortis quis, varius in, purus. Integer</p>
+                    </div>
+                </div>
+                <div class="realization">
+                    <div class="realization__frame tiles_7">
+                    </div>
+                    <div class="realization__describe">
+                        <h3 class="realization__describe--title">Układanie kafelek w restuaracji francuskiej</h3>
+                        <p class="realization__describe--text">Mauris nec malesuada fames ac turpis scing wis endum
+                            sapien massa ac turpis faucibus.</p>
+                    </div>
+                </div>
+                <div class="realization">
+                    <div class="realization__frame tiles_8">
+                    </div>
+                    <div class="realization__describe">
+                        <h3 class="realization__describe--title">Układanie kafelek w gospodzie u Babci Maliny</h3>
+                        <p class="realization__describe--text">Tortor fringilla sed, vestib bus orci luctus onsectetuer
+                            lobortis quis, varius in, purus. Integer</p>
                     </div>
                 </div>
             </div>
@@ -147,7 +196,7 @@
                 <div class="footer__header--phone">
                     <p class="footer__header--text--s">zadzwoń</p>
                     <a href="tel:+48639852741">
-                        <image src="image/phone.png" alt="Icon phone"></image>
+                        <img src="image/phone.png" alt="Icon phone">
                     </a>
                     <p class="footer__header--text--l">+48 639 852 741</p>
                 </div>
@@ -155,7 +204,6 @@
         </div>
 
         <div class="footer">
-            <img class="footer__background" src="image/aaa.png" alt="">
             <div class="footer__wrap">
                 <div class="footer_container">
                     <div class="footer__logo">
@@ -175,12 +223,13 @@
                             </div>
                             <div class="address__col">
                                 <br>
-                                <a class="address__text address__text__normal" href="tel:+48639852741">Tel.: +48 639 852
-                                    741</a> <br>
-                                <span class="address__text address__text__normal">E-mail: </span><a
-                                    href="mailto:kontakt@witabud.pl"
-                                    class="address__text__normal address__text__yellow">kontakt@witabud.pl</a>
+                                <p><a class="address__text address__text__normal" href="tel:+48639852741">Tel.: +48 639 852
+                                    741</a></p>
+                                <p class="address__text address__text__normal">E-mail: <a
+                                        href="mailto:kontakt@witabud.pl"
+                                        class="address__text__normal address__text__yellow">kontakt@witabud.pl</a></p>
                             </div>
+
                         </div>
                     </div>
                     <div class="footer__social">

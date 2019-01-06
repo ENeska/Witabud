@@ -1,5 +1,5 @@
 footer {
-  font-family: 'League Spartan', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .footer__header {
@@ -26,14 +26,13 @@ footer {
     @include screen-desktop {
       grid-template-columns: 3fr 3.7fr;
       max-width: 1170px;
-      padding: 0 37px;
+      padding: 0 37px 0 37px;
       margin: auto;
     }
   }
 
   &--text {
     color: $color-yellow-light;
-    font-family: 'Roboto', sans-serif;
     text-align: center;
     font-size: 18px;
     padding: 0 0 30px 0;
@@ -55,6 +54,8 @@ footer {
     justify-content: space-evenly;
     align-content: center;
     flex-direction: row;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 900;
     align-items: center;
     flex-wrap: wrap;
     @include screen-phone-l {
@@ -115,61 +116,43 @@ footer {
 
 .footer {
   background-color: $color-black;
+  background-image: url("image/aaa.png");
+  background-position: top -120px left -250px;
+  background-repeat: no-repeat;
   position: relative;
-
-  &__background {
-    top: -21%;
-    left: -60%;
-    position: absolute;
-    height: 85%;
-    z-index: 0;
-    @include screen-phone-l {
-      top: -18%;
-      left: -14%;
-      height: 83%;
-    }
-    @include screen-tablet {
-      top: -25%;
-      left: -25%;
-      height: 133%;
-    }
-    @include screen-tablet {
-      top: -25%;
-      left: -25%;
-      height: 133%;
-    }
-    @include screen-desktop {
-      top: -30%;
-      left: 0;
-      height: 133%;
-    }
+  @include screen-phone-l {
+    background-position: top -130px left -110px;
+  }
+  @include screen-tablet {
+    background-position: top -135px left -260px;
+  }
+  @include screen-desktop {
+    background-position: top -130px left 0px;
   }
 
   &__logo {
     border-bottom: 1px solid $color-grey-dark-2;
     box-sizing: content-box;
-    padding-top: 40px;
-    padding-bottom: 35px;
+    padding: 40px 0 35px 0;
   }
 }
 
 .address__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 25px 0;
+  padding: 25px 0 25px 0;
 
   @include screen-phone-l {
+    grid-template-columns: 1.1fr 1fr 1.35fr;
+  }
+  @include screen-tablet {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 .address__text {
-  font-family: "Roboto";
-  font-size: 16px;
-  line-height: 1.2;
-  @include screen-phone-l {
-    font-size: 14px;
-  }
+
+
   &__bold {
     color: $color-grey-light-7;
     font-weight: bold;
@@ -179,6 +162,11 @@ footer {
   &__normal {
     color: $color-grey-light-9;
     text-decoration: none;
+    font-size: 16px;
+    line-height: 1.2;
+    @include screen-phone-l {
+      font-size: 14px;
+    }
   }
 
   &__yellow {
@@ -193,32 +181,33 @@ footer {
   font-size: 13px;
   font-weight: bold;
   grid-template-columns: 1fr 1fr;
-  padding: 25px 0;
+  padding: 25px 0 25px 0;
   text-transform: uppercase;
   @include screen-phone-l {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2.1fr 1.35fr;
   }
   @include screen-tablet {
     grid-template-columns: 1fr 2fr;
   }
 
   &--icon:first-of-type {
-    padding-right: 15px;
+    padding-right: 12px;
   }
 
   &--icon:nth-child(2) {
-    padding-right: 15px;
+    padding-right: 12px;
   }
 
   &--title {
     font-family: 'League Spartan', sans-serif;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 13px;
+    color: $color-grey-light-17;
   }
 }
 
 .footer__nav {
-  padding: 30px 0;
+  padding: 30px 0 30px 0;
   position: relative;
   z-index: 2;
 
@@ -282,8 +271,7 @@ footer {
 .footer__time4 {
   background-color: $color-grey-dark-2;
   color: $color-grey-light-14;
-  font-family: 'Roboto', sans-serif;
-  padding: 30px 0;
+  padding: 30px 0 30px 0;
   position: relative;
   z-index: 2;
 

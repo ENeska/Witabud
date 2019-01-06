@@ -8,19 +8,19 @@
     <meta name="apple-mobile-web-app-title" content="Witabud">
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, shrink-to-fit=no">
     <link href="style_article.css" rel="stylesheet">
-    <script src="src/js/app.js" defer></script>
+    <script src="src/js/app_article.js" defer></script>
     <title>Witabud</title>
 </head>
 
 <body>
 <div id="wrap" class="wrap">
     <header class="head">
-        <a href="index.html" class="head__logo" title="Go back to homepage">
+        <a href="index.html" id="logo" class="head__logo" title="Go back to homepage">
             <img src="image/logo.png" alt="Logo">
         </a>
-        <a href="#" id="hamburger" class="head__hamburger" title="Open menu">
+        <button href="#" id="hamburger" class="head__hamburger" title="Open menu">
             <img src="image/hamburger.png" alt="Menu">
-        </a>
+        </button>
         <nav id="menu" class="menu">
             <ul class="menu__list">
                 <li id="back" class="menu__list--item"><img class="menu__list--arrow" src="image/arrow_menu.png" alt="">wróć
@@ -40,9 +40,9 @@
         <h1 class="article__title">układanie kafelek</h1>
         <article class="article__container">
             <section class="article__content">
-                <h3 class="article__content--header">Sagittis tortor orci at metus. Nullam consequat faucibus, fermentum
+                <h2 class="article__content--header">Sagittis tortor orci at metus. Nullam consequat faucibus, fermentum
                     vel, viverra consectetuer. Curabitur vel massa. Nunc varius dui. In vitae turpis id purus magnis dis
-                    parturient montes, nascetur ridiculus rem.</h3>
+                    parturient montes, nascetur ridiculus rem.</h2>
                 <p class="article__content--text">Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum
                     dapibus, mauris nec malesuada fames ac turpis velit, honcus eu, luctus et interdum adipiscing wisi.
                     Aliquam erat ac ipsum. Integer aliquam purus tricies eu, faucibus quis, porttitor eros cursus
@@ -85,7 +85,7 @@
         </article>
 
         <section class="realizations">
-            <h1 class="realizations__title">realizacje</h1>
+            <h2 class="realizations__title">realizacje</h2>
             <div class="realizations__container">
                 <div class="realization">
                     <div class="realization__frame tiles_1">
@@ -161,7 +161,7 @@
                 </div>
             </div>
             <div class="realization__btn">
-                <a class="realization__btn--more" href="">zobacz wiecej</a>
+                <button class="realization__btn--more" id="btnMore">zobacz wiecej</button>
             </div>
         </section>
         <section class="services">
@@ -186,7 +186,7 @@
                 <div class="footer__header--phone">
                     <p class="footer__header--text--s">zadzwoń</p>
                     <a href="tel:+48639852741">
-                        <image src="image/phone.png" alt="Icon phone"></image>
+                        <img src="image/phone.png" alt="Icon phone"></img>
                     </a>
                     <p class="footer__header--text--l">+48 639 852 741</p>
                 </div>
@@ -194,7 +194,6 @@
         </div>
 
         <div class="footer">
-            <img class="footer__background" src="image/aaa.png" alt="">
             <div class="footer__wrap">
                 <div class="footer_container">
                     <div class="footer__logo">
@@ -214,11 +213,11 @@
                             </div>
                             <div class="address__col">
                                 <br>
-                                <a class="address__text address__text__normal" href="tel:+48639852741">Tel.: +48 639 852
-                                    741</a> <br>
-                                <span class="address__text address__text__normal">E-mail: </span><a
-                                    href="mailto:kontakt@witabud.pl"
-                                    class="address__text__normal address__text__yellow">kontakt@witabud.pl</a>
+                                <p><a class="address__text address__text__normal" href="tel:+48639852741">Tel.: +48 639 852
+                                    741</a></p>
+                                    <p class="address__text address__text__normal">E-mail: <a
+                                            href="mailto:kontakt@witabud.pl"
+                                            class="address__text__normal address__text__yellow">kontakt@witabud.pl</a></p>
                             </div>
                         </div>
                     </div>

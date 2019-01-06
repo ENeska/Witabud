@@ -17,3 +17,9 @@
     @content;
   }
 }
+
+@mixin screen-desktop-xl {
+  @media screen and (min-width: $screen-desktop-xl) {
+    @content;
+  }
+}

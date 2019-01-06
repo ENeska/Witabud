@@ -1,13 +1,18 @@
 @import "_variables.scss";
 @import "mixins/screen";
-@import "normalize";
+@import "reset";
 
 * {
   box-sizing: border-box;
-  font-family: 'League Spartan', sans-serif;
+
   margin: 0;
   padding: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 *:after, *:before {
   box-sizing: inherit;
@@ -26,14 +31,14 @@ html, body {
     color: $color-yellow-dark;
     font-family: 'League Spartan', sans-serif;
     font-size: 30px;
-    font-weight: bolder;
-    padding: 50px 25px;
+    font-weight: 900;
+    padding: 50px 25px 50px 25px;
     text-transform: uppercase;
     @include screen-phone-l {
-      padding: 50px 30px;
+      padding: 50px 30px 50px 30px;
     }
-    @include screen-phone-l {
-      padding: 50px 37px;
+    @include screen-tablet {
+      padding: 50px 37px 50px 37px;
     }
     @include screen-desktop {
       max-width: 1170px;
@@ -47,7 +52,7 @@ html, body {
       background-size: cover;
       background-repeat: no-repeat;
       content: "";
-      height: 130px;
+      height: 134px;
       left: 0;
       position: absolute;
       top: 0;
@@ -70,28 +75,31 @@ html, body {
   }
 
   &__content {
-    padding: 0 25px;
+    padding: 0 25px 0 25px;
     @include screen-phone-l {
-      padding: 0 30px;
+      padding: 0 30px 0 30px;
     }
     @include screen-tablet {
       padding: 0;
     }
 
     &--header {
-      color: $color-main-21;
+      color: $color-grey-dark-8;
       font-family: 'Roboto', sans-serif;
       font-size: 22px;
       font-weight: normal;
       line-height: 34px;
       padding: 45px 0 40px 0;
       @include screen-phone-l {
+         padding: 45px 0 40px 0;;
+       }
+      @include screen-tablet {
         padding: 0 0 40px 0;;
       }
     }
 
     &--text {
-      color: $color-main-20;
+      color: $color-grey-dark-7;
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
       font-weight: normal;
@@ -113,7 +121,7 @@ html, body {
 }
 
 aside {
-  padding: 0 25px;
+  padding: 0 25px 0 25px;
 }
 
 .form {
@@ -130,6 +138,7 @@ aside {
     color: white;
     font-size: 18px;
     font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
     padding-bottom: 30px;
     text-transform: uppercase;
   }
@@ -137,7 +146,7 @@ aside {
   &__input {
     border: none;
     margin-bottom: 10px;
-    padding: 20px 25px;
+    padding: 20px 25px 20px 25px;
     width: 100%;
 
     &--long {
@@ -166,7 +175,7 @@ aside {
     font-size: 14px;
     font-family: 'League Spartan', sans-serif;
     outline: none;
-    padding: 20px 25px;
+    padding: 20px 25px 20px 25px;
     text-transform: uppercase;
     text-align: center;
     width: 100%;
@@ -174,7 +183,7 @@ aside {
 }
 
 input::placeholder, textarea::placeholder {
-  color: $color-main-22;
+  color: $color-grey-light-18;
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
 }
@@ -194,24 +203,22 @@ input::placeholder, textarea::placeholder {
   &--title {
     font-size: 18px;
     font-family: 'League Spartan', sans-serif;
-    font-weight: bold;
+    font-weight: 800;
     line-height: 1.667;
     padding-bottom: 41px;
     text-transform: uppercase;
   }
 
   &--header {
-    color: $color-main-24;
+    color: $color-grey-light-19;
     font-size: 18px;
-    font-family: 'Roboto', sans-serif;
     font-weight: normal;
     line-height: 1.666;
   }
 
   &--p {
-    color: $color-main-25;
+    color: $color-grey-light-20;
     font-size: 14px;
-    font-family: 'Roboto', sans-serif;
     font-weight: normal;
     line-height: 26px;
     padding-top: 40px;
@@ -233,8 +240,9 @@ input::placeholder, textarea::placeholder {
   }
 
   &__title {
+    font-family: 'League Spartan', sans-serif;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 900;
     padding-bottom: 55px;
     position: relative;
     text-transform: uppercase;
@@ -274,20 +282,17 @@ input::placeholder, textarea::placeholder {
 }
 
 .realization {
-  display: grid;
+  display: none;
   grid-template-rows: 2.3fr 1.8fr;
   margin-bottom: 15px;
   @include screen-phone-l {
-    display: grid;
     grid-template-columns: 4fr 3.2fr;
     grid-template-rows: 1fr;
   }
   @include screen-tablet {
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
-
 
   &__frame {
     background-position: left 20% top 0;
@@ -297,7 +302,7 @@ input::placeholder, textarea::placeholder {
 
   &__describe {
     border: 1px solid $color-grey-light-1;
-    padding: 35px 30px;
+    padding: 35px 30px 35px 30px ;
     @include screen-phone-l {
       padding: 35px 30px 45px 30px;
     }
@@ -306,8 +311,9 @@ input::placeholder, textarea::placeholder {
     }
 
     &--title {
+      font-family: 'League Spartan', sans-serif;
       font-size: 18px;
-      font-weight: bold;
+      font-weight: 900;
       line-height: 1.2;
       padding-bottom: 25px;
     }
@@ -322,19 +328,26 @@ input::placeholder, textarea::placeholder {
   }
 
   &__btn {
-    background-color: $color-brand;
-    display: flex;
-    justify-content: center;
+
     margin: 20px 0 0 0;
-    padding: 25px 0;
-    width: 100%;
 
     &--more {
+      background-color: $color-brand;
+      display: flex;
+      justify-content: center;
+      padding: 25px 0 25px 0;
+      width: 100%;
       color: white;
+      font-family: 'League Spartan', sans-serif;
       font-size: 14px;
       font-weight: bold;
       text-decoration: none;
       text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
     }
   }
 }
@@ -372,6 +385,8 @@ input::placeholder, textarea::placeholder {
 }
 
 .services {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 900;
   padding: 55px 25px 60px 25px;
   position: relative;
   @include screen-phone-l {
@@ -382,8 +397,7 @@ input::placeholder, textarea::placeholder {
   }
 
   &__title {
-    color: $color-main-24;
-    font-weight: bold;
+    color: $color-grey-light-19;
     font-size: 20px;
     line-height: 1.2;
     padding-bottom: 45px;
@@ -425,10 +439,9 @@ input::placeholder, textarea::placeholder {
       border: 2px solid $color-black;
       display: grid;
       font-size: 18px;
-      font-weight: bold;
       height: 60px;
       line-height: 1.2;
-      padding: 0 5px;
+      padding: 0 5px 0 5px;
       text-align: center;
     }
   }
