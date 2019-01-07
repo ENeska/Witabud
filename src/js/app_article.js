@@ -16,12 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.addEventListener("click", () => {
         menu.setAttribute("class", "open_menu");
         wrap.classList.add("open_menu_wrap");
-    };
+    });
 
     back.addEventListener("click", () => {
         wrap.classList.remove("open_menu_wrap");
         menu.setAttribute("class", "menu");
-    };
+    });
 
     window.addEventListener("resize", resizeMenu);
 
