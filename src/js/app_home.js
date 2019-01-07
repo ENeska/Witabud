@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    hamburger.onclick = () => {
+    hamburger.addEventListener("click", () => {
         menu.setAttribute("class", "open_menu");
         wrap.classList.add("open_menu_wrap");
     };
 
-    back.onclick = () => {
+    back.addEventListener("click", () => {
         wrap.classList.remove("open_menu_wrap");
         menu.setAttribute("class", "menu");
     };
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //slider
     let slideIndex = 0;
-    let bgArray = ["image/slider1.png", "image/slider2.png"];
+    const bgArray = ["image/slider1.png", "image/slider2.png"];
     let slider = document.querySelector(".slider");
     let leftSlider = document.querySelector("#left");
     let rightSlider = document.querySelector("#right");
