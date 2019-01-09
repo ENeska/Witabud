@@ -1,4 +1,4 @@
-<h1>Strona wykonana na potrzeby rekrutacji.</h1><br>
+<h2>Strona wykonana na potrzeby rekrutacji</h2><br>
 Wykorzystująca następujące technologie:
 <ul>
 <li> HTML5, </li>
