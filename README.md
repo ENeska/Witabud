@@ -6,4 +6,6 @@ Wykorzystująca następujące technologie:
 <li> Javascript</li>
 </ul>
 
+Aktywne zakładki to strona główna i realizacje. 
+
 Link: https://eneska.github.io/Witabud/index.html
